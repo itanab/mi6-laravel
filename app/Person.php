@@ -16,7 +16,7 @@ class Person extends Model
         return $this->hasOne('App\Image');
     }
 
-    public function statuses()
+    public function status()
     {
         return $this->belongsTo('App\Status');
     }
