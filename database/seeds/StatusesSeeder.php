@@ -12,7 +12,8 @@ class StatusesSeeder extends Seeder
      */
     public function run()
     {
-        $array = [["name" => "Alive"],
+        $array = [["name" => "Active"],
+        ["name" => "Alive"],
         ["name" => "Arrested"],
         ["name" => "Deceased"],
         ["name" => "In Custody"],
