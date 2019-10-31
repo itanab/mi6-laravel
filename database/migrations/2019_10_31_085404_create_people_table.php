@@ -17,6 +17,7 @@ class CreatePeopleTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('status_id');
+            $table->unsignedBigInteger('image_id');
             $table->string('name');
             $table->string('title');
             $table->unsignedInteger('age');
