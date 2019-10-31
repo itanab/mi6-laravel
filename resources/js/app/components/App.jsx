@@ -7,7 +7,7 @@ export default class App extends React.Component {
         super(props);
 
         this.state = {
-            logged_in: false,
+            logged_in: null,
             token: null
         };
     }
