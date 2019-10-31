@@ -31,7 +31,7 @@ class PeopleSeeder extends Seeder
             $image = null;
             if ($item->image) {
                 $image = new \App\Image; // \App\Image
-                $image->path = 'people/'.$item->image;
+                $image->image_url = 'people/'.$item->image;
                 $image->save();
             }
         
@@ -56,9 +56,9 @@ class PeopleSeeder extends Seeder
             $person->name = $item->name;                // name
             $person->title = $item->title;              // title
             $person->age = $item->age;                  // age
-            $person->born = $item->born;                // born
-            $person->died = $item->died;                // died
-            $person->features = $item->features;        // features
+            $person->year_of_birth = $item->born;                // born
+            $person->year_of_death = $item->died;                // died
+            $person->special_features = $item->features;        // features
             $person->hair_color = $item->hair_color;    // hair_color
             $person->eye_color = $item->eye_color;      // eye_color
             $person->height = $item->height;            // height
@@ -72,7 +72,7 @@ class PeopleSeeder extends Seeder
             foreach ($item->aliases as $alias_name) {
                 $alias = new \App\Alias;            // \App\Alias
                 $alias->person_id = $person->id;    // person_id
-                $alias->alias = $alias_name;        // alias
+                $alias->name = $alias_name;        // alias
                 $alias->save();
             }
         }
