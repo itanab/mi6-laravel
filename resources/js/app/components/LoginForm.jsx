@@ -37,7 +37,7 @@ export default class LoginForm extends React.Component {
         })
       })
       .then(response => response.json())
-      .then(response => this.props.token(response.data.token))
+      .then(response => this.props.loginSuccess(response.data.token))
     }
     
     

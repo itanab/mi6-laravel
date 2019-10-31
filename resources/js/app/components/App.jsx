@@ -7,8 +7,8 @@ export default class App extends React.Component {
         super(props);
 
         this.state = {
-            logged_in: null,
-            token: null
+            logged_in: false,
+            token: window.localStorage.getItem('_token')
         };
     }
 
@@ -27,11 +27,14 @@ export default class App extends React.Component {
                 return "Loading.."
             } else if (this.state.logged_in) {
                 return (
-                    <PeopleList/>
+                    <PeopleList
+                    token={ this.state.token }
+                    />
             )} else {
                 return (
                     <LoginForm
-                    token={this.onLoginSuccess}
+                    loginSuccess={this.onLoginSuccess}
+                    token={ this.state.token }
                     />
                 )
             }
