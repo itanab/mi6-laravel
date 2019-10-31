@@ -31961,9 +31961,30 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./resources/js/App/Components/App.jsx":
+/***/ "./resources/js/app.js":
+/*!*****************************!*\
+  !*** ./resources/js/app.js ***!
+  \*****************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _app_components_App_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app/components/App.jsx */ "./resources/js/app/components/App.jsx");
+
+
+
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_app_components_App_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], null), document.getElementById("app"));
+
+/***/ }),
+
+/***/ "./resources/js/app/components/App.jsx":
 /*!*********************************************!*\
-  !*** ./resources/js/App/Components/App.jsx ***!
+  !*** ./resources/js/app/components/App.jsx ***!
   \*********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -31973,7 +31994,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return App; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _PeopleList_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PeopleList.jsx */ "./resources/js/App/Components/PeopleList.jsx");
+/* harmony import */ var _PeopleList_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PeopleList.jsx */ "./resources/js/app/components/PeopleList.jsx");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -32020,9 +32041,9 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ "./resources/js/App/Components/PeopleList.jsx":
+/***/ "./resources/js/app/components/PeopleList.jsx":
 /*!****************************************************!*\
-  !*** ./resources/js/App/Components/PeopleList.jsx ***!
+  !*** ./resources/js/app/components/PeopleList.jsx ***!
   \****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -32074,7 +32095,7 @@ function (_React$Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      fetch("http://www.mi6.test/api/person").then(function (response) {
+      fetch("/api/person").then(function (response) {
         return response.json();
       }).then(function (dataResponse) {
         return _this2.setState({
@@ -32097,27 +32118,6 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 
-
-/***/ }),
-
-/***/ "./resources/js/app.js":
-/*!*****************************!*\
-  !*** ./resources/js/app.js ***!
-  \*****************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _App_Components_App_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App/Components/App.jsx */ "./resources/js/App/Components/App.jsx");
-
-
-
-react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_App_Components_App_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], null), document.getElementById("app"));
 
 /***/ }),
 
