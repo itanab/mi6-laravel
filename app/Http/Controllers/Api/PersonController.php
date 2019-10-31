@@ -10,7 +10,7 @@ class PersonController extends Controller
 {
     public function index()
     {
-        $people = Person::orderBy('name')->limit(20)->get();
+        $people = Person::orderBy('name')->with('image')->limit(20)->get();
         return $people;
     }
 }

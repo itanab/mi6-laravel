@@ -32030,7 +32030,7 @@ function (_React$Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "App component"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PeopleList_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null));
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PeopleList_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null));
     }
   }]);
 
@@ -32107,9 +32107,14 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return this.state.data ? this.state.data.map(function (agent) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          key: agent.id
-        }, agent.name);
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          key: agent.id,
+          className: "peopleBox"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, agent.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          className: "peopleImg",
+          src: "/images/".concat(agent.image.image_url),
+          alt: ""
+        }));
       }) : "Loading..";
     }
   }]);

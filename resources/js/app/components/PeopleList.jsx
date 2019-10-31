@@ -17,7 +17,11 @@ export default class PeopleList extends React.Component {
 
     render() {
         return this.state.data
-            ? this.state.data.map(agent => <li key={agent.id}>{agent.name}</li>)
+            ? this.state.data.map(agent => <div  key={agent.id} className="peopleBox">
+                <p>{agent.name}</p>
+                <img className="peopleImg" src={`/images/${agent.image.image_url}`} alt=""/>
+                </div>)
             : "Loading..";
     }
 }
+
